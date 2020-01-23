@@ -16,7 +16,6 @@ export default class App extends Component {
   
   
   addDigit = n => {
-    console.debug(typeof this.state.displayValue)
     const clearDisplay = this.state.displayValue === '0' || this.state.clearDisplay
     
     if (n === '.' && !clearDisplay && this.state.displayValue.includes('.')) {
@@ -84,7 +83,7 @@ export default class App extends Component {
           <Button label='+' operation onClick={() => this.setOperation('+')} />
           <Button label='0' double onClick={() => this.addDigit(0)} />
           <Button label=',' onClick={() => this.addDigit('.')} />
-          <Button label='=' operation onclick={() => this.setOperation('=')} />
+          <Button label='=' operation onClick={() => this.setOperation('=')} />
         </View>
       </View>
     )
